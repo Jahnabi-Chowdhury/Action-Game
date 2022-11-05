@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: red;
+    overflow: hidden;
+}
+.gameContainer{
+    background-image: url(gameBackground4.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+.hero{
+    background-image: url(hero.gif);
+    transform: scaleX(-1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 233px;
+    height: 230px;
+    position: absolute;
+    bottom: 0;
+    left: 10  00px;   
+}
+.obstacle{
+    width: 345px;
+    height: 255px;
+    background-image: url(villain.gif);
+    transform: scaleX(-1);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 1vw;
+}
+.animateHero{
+    animation: hero 0.6s linear;
+}
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+
+}
+.gameOver{
+    color: whitesmoke;
+    position: relative;
+    top: 10px;
+    font-size: 53px;
+    font-weight: bolder;
+    text-align: center;
+    font-family: 'Poor Story', cursive;
+    
+}
+#scoreCont{
+    color: whitesmoke;
+    position: absolute;
+    right: 45px;
+    top: 31px;
+    border: 3px solid wheat;
+    padding: 10px;
+    font-family: 'Poor Story', cursive;
+    font-weight: bold;
+}
+@keyframes hero {
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 422px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+@keyframes obstacleAni {
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+    
+}
